@@ -1,102 +1,89 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="blue">
-	<head>
-		<title>Tweetz</title>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- Bootstrap -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-		<!-- Favicons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="data/icons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="data/icons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="data/icons/favicon-16x16.png">
-		<link rel="manifest" href="data/site.webmanifest">
-	</head>
-	<body>
-	<!-- 
-		# TODO(@gciftci) navbar
-		#  [ ] clear navbar class
-	-->
-	<nav class="navbar fixed-top navbar-default navbar-static-top navbar-dark bg-dark bg-primary navbar-expand-sm">
-		<div class="container-fluid">
-			<img src="https://cdn-icons-png.flaticon.com/512/1384/1384065.png" alt="Bootstrap" width="24" height="24">
-			<a class="navbar-brand p-2" href="#">Tweetz</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+<html lang="en" data-bs-theme="dark">
+<head>
+	<title>firebeez.online</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<!-- Font-Awesome -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="data/icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="data/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="data/icons/favicon-16x16.png">
+	<link rel="manifest" href="data/site.webmanifest">
+</head>
+<body>
+	<div class="container">
+<!-- Image and text -->
+<!-- Navbar -->
+	<nav class="navbar navbar-dark fixed-top flex-wrap p-0 px-2 m-0 justify-content-between" style="background-color: #0c0e0f; border-bottom: #FFFFFF solid 1px;">
+		<div class="navbar-brand">
+			<img src="data/img/firebeez.png" width="45" height="45" class="d-inline-block" alt="">
+			<span class="fw-bold text-light">firebeez</span><span class="ps-1 text-danger fw-light">online</span>
+		</div>
+		<a href="#" class="text-muted">
+			<i class="fs-3 bi-person-circle"></i>
+		</a>
+	</nav>
+
+<!-- login -->
+<div class="row py-5 mt-5 justify-content-center">
+	<form style="width: 23rem;" class="needs-validation">
+		<h2 class="fw-bold text-danger pb-5">
+			hello,<span class="text-secondary fw-light ms-2">there</span>
+		</h2>
+		<h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+		<hr class="hr" />
+		<div class="form-floating mb-3">
+			<input type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+			<label for="inputEmail">Email address</label>
+		  </div>
+		  <div class="form-floating">
+			<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+			<label for="inputPassword">Password</label>
+		  </div>
+		<div class="pt-1 mb-4">
+			<button class="btn btn-danger btn-lg mt-2 w-100" type="submit">Sign In
+				<i class="m-0 p-0 fs-5 bi bi-box-arrow-in-right"></i>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-				<a class="nav-link active" aria-current="page" href="#">Home</a>
-				</li>
-			</ul>
-			<form class="d-flex" role="search">
-				<input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-				<button class="btn btn-outline-success" type="submit">Search</button>
-			</form>
-			</div>
 		</div>
-	</nav>
-	<!-- 
-		# TODO(@gciftci) tweet [card@bs]
-		#  [ ] beauitfy
-		#  [ ] make it lightweight
-	-->
-	<div class="container-fluid">
-		<!-- Card-Row -->
-		<div class="row g-0" style="padding-top:80px">
-			<div class="col-8 offset-1">
-				<!-- Card Entry -->
-				<div class="card mb-2 mt-2">
-					<!-- Card Header -->
-					<div class="card-header">
-						<div class="row align-items-start">
-							<div class="col-auto g-0 align-items-start">
-								<p class="m-0 p-0 align-end"><img src="https://pbs.twimg.com/profile_images/1218297175182135301/0Y235wxT_400x400.jpg" class="img-fluid rounded-circle border" style="max-height:3rem"></p>
-							</div>
-							<div class="col-auto ps-2 p-0 m-0">
-								<h5 class="m-0 p-0 align-top">Garbis Ciftci</h5>
-								<small class="m-0 p-0 text-muted align-top">@gciftci</small>
-							</div>
-							<div class="col ps-2">
-							<small class="text-muted align-top"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/512px-Twitter_Verified_Badge.svg.png" class="img" style="max-height:1rem"></small>
-							</div>
-						</div>
-					</div>
-					<!-- Card Body -->
-					<div class="card-body pb-0 pt-0">
-						<p class="card-text-wrap m-0 g-0">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua ...</p>
-						<small class="text-muted fst-italic m-0 p-0">Last updated 3 mins ago</small>
-						<!-- Card Icons -->
-						<div class="m-0">
-							<svg viewbox="0 0 24 24" width="24px" height="24px"><g><path d="M1.751 10c0-4.42 3.584-8 8.005-8h4.366c4.49 0 8.129 3.64 8.129 8.13 0 2.96-1.607 5.68-4.196 7.11l-8.054 4.46v-3.69h-.067c-4.49.1-8.183-3.51-8.183-8.01zm8.005-6c-3.317 0-6.005 2.69-6.005 6 0 3.37 2.77 6.08 6.138 6.01l.351-.01h1.761v2.3l5.087-2.81c1.951-1.08 3.163-3.13 3.163-5.36 0-3.39-2.744-6.13-6.129-6.13H9.756z"></path></g></svg>
-							<small class="text-muted fst-italic pe-3">508</small>
-							<svg viewbox="0 0 24 24" width="24px" height="24px"><g><path d="M4.5 3.88l4.432 4.14-1.364 1.46L5.5 7.55V16c0 1.1.896 2 2 2H13v2H7.5c-2.209 0-4-1.79-4-4V7.55L1.432 9.48.068 8.02 4.5 3.88zM16.5 6H11V4h5.5c2.209 0 4 1.79 4 4v8.45l2.068-1.93 1.364 1.46-4.432 4.14-4.432-4.14 1.364-1.46 2.068 1.93V8c0-1.1-.896-2-2-2z"></path></g></svg>
-							<small class="text-muted fst-italic pe-3">11'205</small>
-							<svg viewbox="0 0 24 24" width="24px" height="24px"><g><path d="M16.697 5.5c-1.222-.06-2.679.51-3.89 2.16l-.805 1.09-.806-1.09C9.984 6.01 8.526 5.44 7.304 5.5c-1.243.07-2.349.78-2.91 1.91-.552 1.12-.633 2.78.479 4.82 1.074 1.97 3.257 4.27 7.129 6.61 3.87-2.34 6.052-4.64 7.126-6.61 1.111-2.04 1.03-3.7.477-4.82-.561-1.13-1.666-1.84-2.908-1.91zm4.187 7.69c-1.351 2.48-4.001 5.12-8.379 7.67l-.503.3-.504-.3c-4.379-2.55-7.029-5.19-8.382-7.67-1.36-2.5-1.41-4.86-.514-6.67.887-1.79 2.647-2.91 4.601-3.01 1.651-.09 3.368.56 4.798 2.01 1.429-1.45 3.146-2.1 4.796-2.01 1.954.1 3.714 1.22 4.601 3.01.896 1.81.846 4.17-.514 6.67z"></path></g></svg>
-							<small class="text-muted fst-italic pe-3">4'865</small>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+		<div class="col">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="checkRemember">
+                <label class="form-check-label" for="checkRemember">Remember me</label>
+            </div>
+			<span class="small mb-5 pb-lg-2">
+				<p><a class="text-muted" href="#!">Forgot password?</a></p>
+			</span>
+        </div>
+		<p>Don't have an account? <a href="#!" class="link-success">Register here</a></p>
+	</form>
+</div>
+
+<!-- Navbar bot-->
+<nav class="navbar navbar-dark fixed-bottom justify-content-between" style="background-color: #0c0e0f; border-top: #FFFFFF solid 1px;">
+	<div class="col-md-6 text-start text-muted">
+		<a href="https://phpmyadmin.firebeez.online" class="text-muted fst-italic">
+		<button class="btn btn-info" type="submit">
+			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-database-fill" viewBox="0 0 16 16">
+			<path d="M3.904 1.777C4.978 1.289 6.427 1 8 1s3.022.289 4.096.777C13.125 2.245 14 2.993 14 4s-.875 1.755-1.904 2.223C11.022 6.711 9.573 7 8 7s-3.022-.289-4.096-.777C2.875 5.755 2 5.007 2 4s.875-1.755 1.904-2.223Z"/>
+			<path d="M2 6.161V7c0 1.007.875 1.755 1.904 2.223C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777C13.125 8.755 14 8.007 14 7v-.839c-.457.432-1.004.751-1.49.972C11.278 7.693 9.682 8 8 8s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"/>
+			<path d="M2 9.161V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13s3.022-.289 4.096-.777C13.125 11.755 14 11.007 14 10v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"/>
+			<path d="M2 12.161V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13v-.839c-.457.432-1.004.751-1.49.972-1.232.56-2.828.867-4.51.867s-3.278-.307-4.51-.867c-.486-.22-1.033-.54-1.49-.972Z"/>
+		  </svg>
+		</button></a> 
 	</div>
-	<!-- 
-		# TODO(@gciftci) navbar bottom
-		#  - [ ] add useful
-	-->
-	<nav class="navbar fixed-bottom navbar-dark bg-dark bg-primary">
-		<small class="text-light fs-6 fst-italic">01:33, 8. January 2023</small>
-	</nav>
-	<!-- Custom JS -->
-	<!-- 
-		# TODO(@memoryleak) Twitter-Stream JS (test)
-		#  [ ] create listener for the stream in data/main.js
-	-->
-	<script src="main.js"></script> 
-	<!-- JS-Imports -->	
-	<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+	<div class="col-md-6 text-end text-muted">
+		<a href="#" class="text-muted fst-italic">Terms of Use</a> 
+		<span class="text-muted mx-2">|</span> 
+		<a href="#" class="text-muted fst-italic">Privacy Policy</a>
+	</div>
+</nav>
+</div>
+
 </body>
 </html>
